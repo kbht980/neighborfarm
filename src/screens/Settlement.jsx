@@ -1,10 +1,10 @@
 import React from 'react';
 import {View , Text} from 'react-native';
 
-export default function About(){
+export default function Settlement(){
     return(
         <View>
-            <Text>NeighborFarmについて</Text>
+            <Text>決済</Text>
         </View>
     )
 }

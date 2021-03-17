@@ -1,10 +1,10 @@
 import React from 'react';
 import {View , Text} from 'react-native';
 
-export default function About(){
+export default function PurchaseHistory(){
     return(
         <View>
-            <Text>NeighborFarmについて</Text>
+            <Text>購入履歴</Text>
         </View>
     )
 }
