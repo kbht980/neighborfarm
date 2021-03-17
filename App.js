@@ -2,20 +2,49 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>ネイバーファームアプリ始動！</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import Favorite from './src/screens/Favorite';
+import Info from './src/screens/Info';
+import Map from './src/screens/TopMap';
+import PurchaseHistory from './src/screens/PurchaseHistory';
+import Settlement from './src/screens/Settlement';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import { NavigationContainer } from '@react-navigation/native';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from '@react-navigation/stack';
+import TopMap from './src/screens/TopMap';
+
+const Stack = createStackNavigator();
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="TopMap"
+          screenOptions={{
+            headerStyle: { backgroundColor: '#A9D159' },
+            headerTitleStyle: { color: '#ffffff' },
+            headerTitle: 'NeibhborFarm',
+            headerTintColor: '#ffffff',
+            headerBackTitle: 'Back',
+            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+            gestureEnabled: true,
+            gestureDirection: 'horizontal',
+          }}
+        >
+          <Stack.Screen name="Favorite" component={Favorite} />
+          <Stack.Screen name="Info" component={Info} />
+          <Stack.Screen name="TopMap" component={TopMap} />
+          <Stack.Screen name="PurchaseHistory" component={PurchaseHistory} />
+          <Stack.Screen name="Settlement" component={Settlement} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
+}
