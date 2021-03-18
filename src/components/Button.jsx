@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React from "react";
+import { Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function Button(props) {
   const { label, onPress, style } = props;
@@ -13,16 +13,16 @@ export default function Button(props) {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    backgroundColor: '#467FD3',
+    backgroundColor: "#467FD3",
     borderRadius: 4,
-    alignSelf: 'flex-start',
+    alignSelf: "flex-start",
     marginBottom: 24,
   },
   buttonLabel: {
     fontSize: 16,
     lineHeight: 32,
     paddingVertical: 8,
-    paddingHorizontal: 32,
-    color: '#ffffff',
+    paddingHorizontal: 150,
+    color: "#ffffff",
   },
 });
