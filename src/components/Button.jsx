@@ -15,14 +15,15 @@ const styles = StyleSheet.create({
   buttonContainer: {
     backgroundColor: "#467FD3",
     borderRadius: 4,
-    alignSelf: "flex-start",
     marginBottom: 24,
+    alignItems: "center",
   },
   buttonLabel: {
     fontSize: 16,
     lineHeight: 32,
     paddingVertical: 8,
-    paddingHorizontal: 150,
+    paddingHorizontal: 100,
     color: "#ffffff",
+    fontWeight: "bold",
   },
 });

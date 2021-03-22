@@ -6,7 +6,7 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  Alert,
+  ScrollView,
 } from "react-native";
 import Button from "../components/Button";
 import { Divider, SocialIcon } from "react-native-elements";
@@ -49,7 +49,7 @@ export default function LoginScreen(props) {
   //   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.inner}>
         <Text style={styles.title}>
           携帯電話番号またはメールアドレスでログイン
@@ -78,13 +78,7 @@ export default function LoginScreen(props) {
           secureTextEntry
           placeholder='パスワード'
         />
-        <Button
-          label='ログイン'
-          style={{
-            alignSelf: "center",
-          }}
-          onPress={() => {}}
-        />
+        <Button label='ログイン' onPress={() => {}} />
 
         <TouchableOpacity
           onPress={() => {
@@ -113,15 +107,14 @@ export default function LoginScreen(props) {
 
         <Text style={styles.title}>アカウントをお持ちでない方はこちら</Text>
         <Button
-          label='ログイン'
+          label='新規登録'
           style={{
-            alignSelf: "center",
             backgroundColor: "#F8CA5F",
           }}
           onPress={() => {}}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
