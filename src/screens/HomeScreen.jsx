@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 // import Button from "../components/Button";
 
 export default function HomeScreen(props) {
@@ -8,8 +8,26 @@ export default function HomeScreen(props) {
   // }
 
   return (
-    <View>
-      <Text>マップ表示</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>マップ表示</Text>
+      <Text style={styles.textAlignCenter}>
+        {"\n"}ドロワーメニューは右端からスワイプ（仮）{"\n"}
+        右上ハンバーガー設置予定
+      </Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text: {
+    fontSize: 30,
+  },
+  textAlignCenter: {
+    textAlign: "center",
+  },
+});

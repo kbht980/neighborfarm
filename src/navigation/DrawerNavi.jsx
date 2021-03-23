@@ -25,7 +25,7 @@ const Drawer = createDrawerNavigator();
 
 export default function DrawerNavi() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator drawerPosition='right'>
       <Drawer.Screen name='販売所を探す' component={MainTabNavigator} />
       <Drawer.Screen name='アカウント情報' component={Account} />
       <Drawer.Screen name='チュートリアル' component={Tutorial} />
