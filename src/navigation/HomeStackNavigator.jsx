@@ -9,6 +9,7 @@ import Favorite from "../screens/Favorite";
 import Info from "../screens/Info";
 import PurchaseHistory from "../screens/PurchaseHistory";
 import Settlement from "../screens/Settlement";
+import LoginScreen from "../screens/LoginScreen";
 
 const cardStyle = {
   backgroundColor: "#008080",
@@ -30,7 +31,7 @@ export default function HomeStackNavigator() {
       />
       <Stack.Screen name='Shop' component={ShopScreen} />
       <Stack.Screen
-        name='お気に入り'
+        name='Favorite'
         component={Favorite}
         options={{
           title: "お気に入りタイトル",
@@ -38,20 +39,22 @@ export default function HomeStackNavigator() {
         }}
       />
       <Stack.Screen
-        name='お知らせ'
+        name='Info'
         component={Info}
         // options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='購入履歴'
+        name='PurchaseHistory'
         component={PurchaseHistory}
         // options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='QRコード決済'
+        name='Settlement'
         component={Settlement}
         // options={{ headerShown: false }}
       />
+
+      <Stack.Screen name='LoginScreen' component={LoginScreen} />
     </Stack.Navigator>
   );
 }
