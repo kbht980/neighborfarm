@@ -17,7 +17,7 @@ export default function PurchaseStackNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: "#000000" },
+        headerStyle: { backgroundColor: "#696969" },
         headerTintColor: "#fff",
       }}
     >

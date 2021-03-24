@@ -11,15 +11,31 @@ import PurchaseHistory from "../screens/PurchaseHistory";
 import Settlement from "../screens/Settlement";
 import LoginScreen from "../screens/LoginScreen";
 
+import { useNavigation } from "@react-navigation/native";
+
 const cardStyle = {
-  backgroundColor: "#008080",
+  backgroundColor: "#b9c42f",
 };
 
 const Stack = createStackNavigator();
 
 export default function HomeStackNavigator() {
+  const navigation = useNavigation();
+
   return (
-    <Stack.Navigator screenOptions={{ cardStyle }}>
+    <Stack.Navigator
+      screenOptions={{ cardStyle }}
+      options={({ navigation }) => (
+        <Icon
+          name='bars'
+          size={24}
+          onPress={() => {
+            navigation.openDrawer();
+          }}
+          style={{ paddingLeft: 20 }}
+        />
+      )}
+    >
       <Stack.Screen
         name='Home'
         component={HomeScreen}

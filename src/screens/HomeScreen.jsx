@@ -9,7 +9,8 @@ export default function HomeScreen(props) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>マップ表示</Text>
+      <Text style={styles.text}>ネイバーファーム</Text>
+      <Text style={styles.text}>Map表示</Text>
       <Text style={styles.textAlignCenter}>
         {"\n"}ドロワーメニューは右端からスワイプ（仮）{"\n"}
         右上ハンバーガー設置予定
