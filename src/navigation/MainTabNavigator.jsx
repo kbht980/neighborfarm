@@ -5,9 +5,12 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 // importScreen
 import HomeStackNavigator from "./HomeStackNavigator";
 import Favorite from "../screens/Favorite";
-import Info from "../screens/Info";
 import PurchaseHistory from "../screens/PurchaseHistory";
 import Settlement from "../screens/Settlement";
+
+// importStack
+import InfoStackNavigator from "./InfoStackNavigator";
+import PurchaseStackNavigator from "./PurchaseStackNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +39,7 @@ export default function MainTabNavigator() {
       />
       <Tab.Screen
         name='Info'
-        component={Info}
+        component={InfoStackNavigator}
         options={{
           tabBarLabel: "お知らせ",
           tabBarIcon: ({ color, size }) => (
@@ -46,7 +49,7 @@ export default function MainTabNavigator() {
       />
       <Tab.Screen
         name='PurchaseHistory'
-        component={PurchaseHistory}
+        component={PurchaseStackNavigator}
         options={{
           tabBarLabel: "購入履歴",
           tabBarIcon: ({ color, size }) => (

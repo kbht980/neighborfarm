@@ -9,7 +9,7 @@ export default function Favorite(props) {
   return (
     <TouchableOpacity style={styles.container}>
       <Button
-        label='使う人は登録かサインイン'
+        label='登録orサインイン実行'
         onPress={() => {
           navigation.navigate("LoginScreen");
         }}

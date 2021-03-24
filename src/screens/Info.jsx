@@ -14,97 +14,128 @@ export default function Favorite() {
   return (
     <ScrollView>
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("個別のページへスタック");
+        }}
+      >
         <View>
-          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
-            お知らせ
-          </Text>
-          <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
+          <Feather name='github' size={30} />
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
+            久保広賢製作所がモロヘイヤを出品しました
+          </Text>
+          <Text style={styles.FavoriteListItemDate}>2021年3月24日13:25</Text>
+        </View>
+        <View>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("個別のページへスタック");
+        }}
+      >
         <View>
-          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
-            お知らせ
-          </Text>
-          <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
+          <Feather name='github' size={30} />
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
+            久保広賢製作所がモロヘイヤを出品しました
+          </Text>
+          <Text style={styles.FavoriteListItemDate}>2021年3月24日13:25</Text>
+        </View>
+        <View>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("個別のページへスタック");
+        }}
+      >
         <View>
-          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
-            お知らせ
-          </Text>
-          <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
+          <Feather name='github' size={30} />
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
+            久保広賢製作所がモロヘイヤを出品しました
+          </Text>
+          <Text style={styles.FavoriteListItemDate}>2021年3月24日13:25</Text>
+        </View>
+        <View>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("個別のページへスタック");
+        }}
+      >
         <View>
-          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
-            お知らせ
-          </Text>
-          <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
+          <Feather name='github' size={30} />
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
+            久保広賢製作所がモロヘイヤを出品しました
+          </Text>
+          <Text style={styles.FavoriteListItemDate}>2021年3月24日13:25</Text>
+        </View>
+        <View>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("個別のページへスタック");
+        }}
+      >
         <View>
-          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
-            お知らせ
-          </Text>
-          <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
+          <Feather name='github' size={30} />
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
+            久保広賢製作所がモロヘイヤを出品しました
+          </Text>
+          <Text style={styles.FavoriteListItemDate}>2021年3月24日13:25</Text>
+        </View>
+        <View>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
+        </View>
+      </TouchableOpacity>
+      {/* 終わり */}
+      {/* 初め */}
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("個別のページへスタック");
+        }}
+      >
+        <View>
+          <Feather name='github' size={30} />
+        </View>
+        <View>
+          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
+            久保広賢製作所がモロヘイヤを出品しました
+          </Text>
+          <Text style={styles.FavoriteListItemDate}>2021年3月24日13:25</Text>
+        </View>
+        <View>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}

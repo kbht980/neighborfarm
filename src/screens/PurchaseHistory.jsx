@@ -14,7 +14,12 @@ export default function Favorite() {
   return (
     <ScrollView>
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("画面がスタックするよ");
+        }}
+      >
         <View>
           <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
             購入履歴
@@ -22,18 +27,17 @@ export default function Favorite() {
           <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("画面がスタックするよ");
+        }}
+      >
         <View>
           <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
             購入履歴
@@ -41,18 +45,17 @@ export default function Favorite() {
           <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("画面がスタックするよ");
+        }}
+      >
         <View>
           <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
             購入履歴
@@ -60,18 +63,17 @@ export default function Favorite() {
           <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("画面がスタックするよ");
+        }}
+      >
         <View>
           <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
             購入履歴
@@ -79,18 +81,17 @@ export default function Favorite() {
           <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}
       {/* 初め */}
-      <TouchableOpacity style={styles.FavoriteListItem} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("画面がスタックするよ");
+        }}
+      >
         <View>
           <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
             購入履歴
@@ -98,13 +99,25 @@ export default function Favorite() {
           <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
         </View>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              Alert.alert("Are you ready?");
-            }}
-          >
-            <Feather name='x' size={16} color='#B0B0B0' />
-          </TouchableOpacity>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
+        </View>
+      </TouchableOpacity>
+      {/* 終わり */}
+      {/* 初め */}
+      <TouchableOpacity
+        style={styles.FavoriteListItem}
+        onPress={() => {
+          Alert.alert("画面がスタックするよ");
+        }}
+      >
+        <View>
+          <Text style={styles.FavoriteListItemTitle} numberOfLines={1}>
+            購入履歴
+          </Text>
+          <Text style={styles.FavoriteListItemDate}>テキストテスト</Text>
+        </View>
+        <View>
+          <Feather name='chevron-right' size={16} color='#B0B0B0' />
         </View>
       </TouchableOpacity>
       {/* 終わり */}

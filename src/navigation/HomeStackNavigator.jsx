@@ -27,7 +27,7 @@ export default function HomeStackNavigator() {
           title: "ネイバーファーム",
           // headerLeft: () => <HeaderLeft />
         }}
-        // options={{ headerShown: false }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen name='Shop' component={ShopScreen} />
       <Stack.Screen
