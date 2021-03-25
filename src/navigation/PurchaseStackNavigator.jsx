@@ -19,6 +19,7 @@ export default function PurchaseStackNavigator() {
       screenOptions={{
         headerStyle: { backgroundColor: "#696969" },
         headerTintColor: "#fff",
+        headerTitle: "購入履歴",
       }}
     >
       <Stack.Screen

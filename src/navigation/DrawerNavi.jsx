@@ -1,16 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import MainTabNavigator from "./MainTabNavigator";
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
-  DrawerContentComponentProps,
-  DrawerContentOptions,
-  DrawerNavigationProp,
-  DrawerContent,
-} from "@react-navigation/drawer";
+
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import {
   Feather,
   AntDesign,
@@ -29,10 +21,12 @@ import QuestionAndAnswer from "../drawerScreens/QuestionAndAnswer";
 import Sell from "../drawerScreens/Sell";
 import Setting from "../drawerScreens/Setting";
 import Tutorial from "../drawerScreens/Tutorial";
+import Info from "../screens/Info";
+import DrawerStack from "../navigation/DrawerStack";
 
 const Drawer = createDrawerNavigator();
 
-export default function DrawerNavi() {
+export default function DrawerNavi(props) {
   function DrawerContent() {
     return (
       <View style={styles.container}>
@@ -60,16 +54,36 @@ export default function DrawerNavi() {
         </View>
         {/* ここから下段 */}
         <View style={styles.downSpace}>
-          <TouchableOpacity style={styles.touchSpace} onPress={() => {}}>
+          <TouchableOpacity
+            style={styles.touchSpace}
+            onPress={() => {
+              props.navigation.navigate("QuestionAndAnswer");
+            }}
+          >
             <Text style={styles.touchTextDown}>Q&A</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.touchSpace} onPress={() => {}}>
+          <TouchableOpacity
+            style={styles.touchSpace}
+            onPress={() => {
+              props.navigation.navigate("Help");
+            }}
+          >
             <Text style={styles.touchTextDown}>ヘルプ</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.touchSpace} onPress={() => {}}>
+          <TouchableOpacity
+            style={styles.touchSpace}
+            onPress={() => {
+              props.navigation.navigate("Setting");
+            }}
+          >
             <Text style={styles.touchTextDown}>設定</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.touchSpace} onPress={() => {}}>
+          <TouchableOpacity
+            style={styles.touchSpace}
+            onPress={() => {
+              props.navigation.navigate("About");
+            }}
+          >
             <Text style={styles.touchTextDown}>ネイバーファームについて</Text>
           </TouchableOpacity>
           <Text style={styles.versionText}>version 1.01</Text>
@@ -105,7 +119,7 @@ export default function DrawerNavi() {
 
       drawerContent={() => <DrawerContent />}
     >
-      <Drawer.Screen name='販売所を探す' component={MainTabNavigator} />
+      <Drawer.Screen name='tab' component={MainTabNavigator} />
     </Drawer.Navigator>
   );
 }
@@ -113,7 +127,6 @@ export default function DrawerNavi() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
   },
   text: {
     fontSize: 30,
@@ -122,7 +135,6 @@ const styles = StyleSheet.create({
   upSpace: {
     backgroundColor: "#b9c42f",
     paddingTop: 100,
-    marginTop: -300,
   },
   touchSpace: {
     paddingHorizontal: 20,

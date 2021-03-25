@@ -13,7 +13,7 @@ import LoginScreen from "../screens/LoginScreen";
 
 const Stack = createStackNavigator();
 
-export default function InfoStackNavigator() {
+export default function InfoStackNavigator(props) {
   return (
     <Stack.Navigator
       screenOptions={{

@@ -20,21 +20,21 @@ const cardStyle = {
 const Stack = createStackNavigator();
 
 export default function HomeStackNavigator() {
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
 
   return (
     <Stack.Navigator
       screenOptions={{ cardStyle }}
-      options={({ navigation }) => (
-        <Icon
-          name='bars'
-          size={24}
-          onPress={() => {
-            navigation.openDrawer();
-          }}
-          style={{ paddingLeft: 20 }}
-        />
-      )}
+      // options={({ navigation }) => (
+      //   <Icon
+      //     name='bars'
+      //     size={24}
+      //     onPress={() => {
+      //       navigation.openDrawer();
+      //     }}
+      //     style={{ paddingLeft: 20 }}
+      //   />
+      // )}
     >
       <Stack.Screen
         name='Home'
