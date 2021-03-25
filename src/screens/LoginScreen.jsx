@@ -7,6 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  StatusBar,
 } from "react-native";
 import Button from "../components/Button";
 import { Divider, SocialIcon } from "react-native-elements";
@@ -50,6 +51,8 @@ export default function LoginScreen(props) {
 
   return (
     <ScrollView style={styles.container}>
+      <StatusBar barStyle='light-content' hidden={true} />
+
       <View style={styles.inner}>
         <Text style={styles.title}>
           携帯電話番号またはメールアドレスでログイン

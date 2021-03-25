@@ -1,7 +1,10 @@
 import React from "react";
+import { StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
 
 import Icon from "react-native-vector-icons/FontAwesome";
+import { FontAwesome } from "@expo/vector-icons";
 
 import HomeScreen from "../screens/HomeScreen";
 import ShopScreen from "../screens/ShopScreen";
@@ -14,22 +17,41 @@ import LoginScreen from "../screens/LoginScreen";
 const Stack = createStackNavigator();
 
 export default function InfoStackNavigator(props) {
+  const navigation = useNavigation();
+
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerStyle: { backgroundColor: "#696969" },
-        headerTintColor: "#fff",
-      }}
-    >
+    <Stack.Navigator>
       <Stack.Screen
         name='Info'
         component={Info}
         options={{
           title: "お知らせ",
           // headerLeft: () => <HeaderLeft />
+          headerLeft: () => (
+            <FontAwesome
+              name='navicon'
+              onPress={() => {
+                navigation.openDrawer();
+              }}
+              title='Info'
+              color='#000000'
+              style={styles.navicon}
+              size={20}
+            />
+          ),
         }}
         // options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    position: "relative",
+  },
+  navicon: {
+    position: "absolute",
+    left: 30,
+  },
+});

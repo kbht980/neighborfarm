@@ -13,6 +13,8 @@ import { Feather } from "@expo/vector-icons";
 export default function Favorite() {
   return (
     <ScrollView>
+      <StatusBar barStyle='light-content' hidden={false} />
+
       {/* 初め */}
       <TouchableOpacity
         style={styles.FavoriteListItem}

@@ -1,4 +1,5 @@
 import React from "react";
+import { StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -12,38 +13,35 @@ import Settlement from "../screens/Settlement";
 import LoginScreen from "../screens/LoginScreen";
 
 import { useNavigation } from "@react-navigation/native";
-
-const cardStyle = {
-  backgroundColor: "#b9c42f",
-};
+import { FontAwesome } from "@expo/vector-icons";
 
 const Stack = createStackNavigator();
 
 export default function HomeStackNavigator() {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   return (
-    <Stack.Navigator
-      screenOptions={{ cardStyle }}
-      // options={({ navigation }) => (
-      //   <Icon
-      //     name='bars'
-      //     size={24}
-      //     onPress={() => {
-      //       navigation.openDrawer();
-      //     }}
-      //     style={{ paddingLeft: 20 }}
-      //   />
-      // )}
-    >
+    <Stack.Navigator style={styles.container}>
       <Stack.Screen
         name='Home'
         component={HomeScreen}
         options={{
-          title: "ネイバーファーム",
+          title: "販売所を探す",
           // headerLeft: () => <HeaderLeft />
+          headerLeft: () => (
+            <FontAwesome
+              name='navicon'
+              onPress={() => {
+                navigation.openDrawer();
+              }}
+              title='Info'
+              color='#000000'
+              style={styles.navicon}
+              size={20}
+            />
+          ),
         }}
-        options={{ headerShown: false }}
+        // options={{ headerShown: false }}
       />
       <Stack.Screen name='Shop' component={ShopScreen} />
       <Stack.Screen
@@ -74,3 +72,13 @@ export default function HomeStackNavigator() {
     </Stack.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    position: "relative",
+  },
+  navicon: {
+    position: "absolute",
+    left: 30,
+  },
+});

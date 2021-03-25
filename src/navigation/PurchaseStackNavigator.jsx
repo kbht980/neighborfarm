@@ -1,7 +1,9 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { StyleSheet } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
 
-import Icon from "react-native-vector-icons/FontAwesome";
+import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
 
 import HomeScreen from "../screens/HomeScreen";
 import ShopScreen from "../screens/ShopScreen";
@@ -14,23 +16,40 @@ import LoginScreen from "../screens/LoginScreen";
 const Stack = createStackNavigator();
 
 export default function PurchaseStackNavigator() {
+  const navigation = useNavigation();
+
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerStyle: { backgroundColor: "#696969" },
-        headerTintColor: "#fff",
-        headerTitle: "購入履歴",
-      }}
-    >
+    <Stack.Navigator>
       <Stack.Screen
         name='Purchase'
         component={PurchaseHistory}
         options={{
           title: "購入履歴",
-          // headerLeft: () => <HeaderLeft />
+          headerLeft: () => (
+            <FontAwesome
+              name='navicon'
+              onPress={() => {
+                navigation.openDrawer();
+              }}
+              title='Info'
+              color='#000000'
+              style={styles.navicon}
+              size={20}
+            />
+          ),
         }}
         // options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    position: "relative",
+  },
+  navicon: {
+    position: "absolute",
+    left: 30,
+  },
+});
