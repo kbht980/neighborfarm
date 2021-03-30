@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -29,16 +29,19 @@ export default function HomeStackNavigator() {
           title: "販売所を探す",
           // headerLeft: () => <HeaderLeft />
           headerLeft: () => (
-            <FontAwesome
-              name='navicon'
+            <TouchableOpacity
               onPress={() => {
                 navigation.openDrawer();
               }}
-              title='Info'
-              color='#000000'
-              style={styles.navicon}
-              size={20}
-            />
+            >
+              <FontAwesome
+                name='navicon'
+                title='Info'
+                color='#000000'
+                style={styles.navicon}
+                size={20}
+              />
+            </TouchableOpacity>
           ),
         }}
         // options={{ headerShown: false }}

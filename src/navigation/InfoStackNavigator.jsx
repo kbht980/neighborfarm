@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 
@@ -28,16 +28,19 @@ export default function InfoStackNavigator(props) {
           title: "お知らせ",
           // headerLeft: () => <HeaderLeft />
           headerLeft: () => (
-            <FontAwesome
-              name='navicon'
+            <TouchableOpacity
               onPress={() => {
                 navigation.openDrawer();
               }}
-              title='Info'
-              color='#000000'
-              style={styles.navicon}
-              size={20}
-            />
+            >
+              <FontAwesome
+                name='navicon'
+                title='Info'
+                color='#000000'
+                style={styles.navicon}
+                size={20}
+              />
+            </TouchableOpacity>
           ),
         }}
         // options={{ headerShown: false }}

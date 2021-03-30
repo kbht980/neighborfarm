@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import { createStackNavigator } from "@react-navigation/stack";
@@ -26,16 +26,19 @@ export default function PurchaseStackNavigator() {
         options={{
           title: "購入履歴",
           headerLeft: () => (
-            <FontAwesome
-              name='navicon'
+            <TouchableOpacity
               onPress={() => {
                 navigation.openDrawer();
               }}
-              title='Info'
-              color='#000000'
-              style={styles.navicon}
-              size={20}
-            />
+            >
+              <FontAwesome
+                name='navicon'
+                title='Info'
+                color='#000000'
+                style={styles.navicon}
+                size={20}
+              />
+            </TouchableOpacity>
           ),
         }}
         // options={{ headerShown: false }}
