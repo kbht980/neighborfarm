@@ -54,5 +54,6 @@ const styles = StyleSheet.create({
   navicon: {
     position: "absolute",
     left: 30,
+    top: 10,
   },
 });

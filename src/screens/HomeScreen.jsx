@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useNavigation } from "@react-navigation/native";
 import {
   AppRegistry,
   StyleSheet,
@@ -14,6 +15,7 @@ import {
 import Carousel from "react-native-snap-carousel";
 import MapView from "react-native-maps";
 import { Alert } from "react-native";
+
 const Images = [
   { uri: "https://aibaeco.co.jp/a-plan/img/niwa_bg07.jpg" },
   {
@@ -33,54 +35,59 @@ const { width, height } = Dimensions.get("window");
 const CARD_HEIGHT = height / 4;
 const CARD_WIDTH = CARD_HEIGHT - 50;
 
-export default class HomeScreen extends Component {
-  state = {
-    scrolledX: 0,
-    markers: [
-      {
-        coordinate: {
-          latitude: 35.805844934604636,
-          longitude: 139.4552292075749,
+export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      scrolledX: 0,
+      markers: [
+        {
+          coordinate: {
+            latitude: 35.805844934604636,
+            longitude: 139.4552292075749,
+          },
+          title: "久保製作所",
+          description: "久保お手製のきゅうり専門",
+          image: Images[0],
         },
-        title: "久保製作所",
-        description: "久保お手製のきゅうり専門",
-        image: Images[0],
-      },
-      {
-        coordinate: {
-          latitude: 35.7767336743756,
-          longitude: 139.40620031240488,
+        {
+          coordinate: {
+            latitude: 35.7767336743756,
+            longitude: 139.40620031240488,
+          },
+          title: "無人販売＠所沢いち美味い",
+          description: "自画自賛なので湖に沈めてみた",
+          image: Images[1],
         },
-        title: "無人販売＠所沢いち美味い",
-        description: "自画自賛なので湖に沈めてみた",
-        image: Images[1],
-      },
-      {
-        coordinate: {
-          latitude: 35.806392457663286,
-          longitude: 139.4198903072799,
+        {
+          coordinate: {
+            latitude: 35.806392457663286,
+            longitude: 139.4198903072799,
+          },
+          title: "フォーチュン農園",
+          description: "フォーチュンってなんやねん",
+          image: Images[2],
         },
-        title: "フォーチュン農園",
-        description: "フォーチュンってなんやねん",
-        image: Images[2],
-      },
-      {
-        coordinate: {
-          latitude: 35.80150601975816,
-          longitude: 139.49141753259633,
+        {
+          coordinate: {
+            latitude: 35.80150601975816,
+            longitude: 139.49141753259633,
+          },
+          title: "ニコニコ広場",
+          description: "花かいどう吉野ってなんやねん",
+          image: Images[3],
         },
-        title: "ニコニコ広場",
-        description: "花かいどう吉野ってなんやねん",
-        image: Images[3],
+      ],
+      region: {
+        latitude: 35.79956020745804,
+        longitude: 139.4687757696602,
+        latitudeDelta: 0.01,
+        longitudeDelta: 0.040142817690068,
       },
-    ],
-    region: {
-      latitude: 35.79956020745804,
-      longitude: 139.4687757696602,
-      latitudeDelta: 0.01,
-      longitudeDelta: 0.040142817690068,
-    },
-  };
+    };
+  }
+
   componentWillMount() {
     this.index = 0;
     this.animation = new Animated.Value(0);
@@ -117,7 +124,7 @@ export default class HomeScreen extends Component {
     return (
       <TouchableOpacity
         onPress={() => {
-          Alert.alert("個別のページがModal表示予定お");
+          props.navigation.navigate("Shop");
         }}
       >
         <View style={styles.card} key={index}>
