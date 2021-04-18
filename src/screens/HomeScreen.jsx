@@ -57,7 +57,7 @@ export default class HomeScreen extends React.Component {
             longitude: 139.40620031240488,
           },
           title: "無人販売＠所沢いち美味い",
-          description: "自画自賛なので湖に沈めてみた",
+          description: "湖座標テスト",
           image: Images[1],
         },
         {
@@ -66,7 +66,7 @@ export default class HomeScreen extends React.Component {
             longitude: 139.4198903072799,
           },
           title: "フォーチュン農園",
-          description: "フォーチュンってなんやねん",
+          description: "テキストテキストテキスト",
           image: Images[2],
         },
         {
@@ -75,7 +75,7 @@ export default class HomeScreen extends React.Component {
             longitude: 139.49141753259633,
           },
           title: "ニコニコ広場",
-          description: "花かいどう吉野ってなんやねん",
+          description: "テキストテキストテキスト",
           image: Images[3],
         },
       ],
